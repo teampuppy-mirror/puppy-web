@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get 'wanteds' => 'todo#index'
   get 'denuncias' => 'todo#index'
   get 'denuncia/:id' => 'todo#index'
-  
+
+  put "user" => 'todo#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
