@@ -51,4 +51,6 @@ production:
   <<: *default
   database: <%= ENV['MYSQL_DATABASE_NAME'] %>
   username: <%= ENV['MYSQL_USER'] %>
-  password: <%= ENV['PUPPY_DATABASE_PASSWORD'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  host: <%= ENV['MYSQL_HOST'] %>
+  port: <%= ENV['MYSQL_PORT'] %>
