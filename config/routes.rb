@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
   
-  get 'user' => 'user#get'
-  #get 'user/likes' to: 'user#likes'
-  put 'user' => 'user#test'
-  #get 'user' to: 'user#get'
-  #get 'user' to: 'user#get'
+
+  root 'todo#index'
+  get 'todo' => 'todo#index'
+
+  get 'user' => 'todo#index'
+
+  get 'pet/:id' => 'todo#index'
+  get 'pets' => 'todo#index'
+  get 'auth' => 'todo#index'
+  get 'user/likes' => 'todo#index'
+  get 'wanteds' => 'todo#index'
+  get 'denuncias' => 'todo#index'
+  get 'denuncia/:id' => 'todo#index'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
