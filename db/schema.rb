@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150411200955) do
+ActiveRecord::Schema.define(version: 20150411211950) do
+
+  create_table "pets", force: :cascade do |t|
+    t.string   "nome",            limit: 255
+    t.string   "foto",            limit: 255
+    t.integer  "sexo",            limit: 4
+    t.string   "especie",         limit: 255
+    t.string   "raca",            limit: 255
+    t.string   "idade",           limit: 255
+    t.string   "porte",           limit: 255
+    t.string   "cor",             limit: 255
+    t.string   "legenda",         limit: 255
+    t.text     "descricao_longa", limit: 65535
+    t.string   "status",          limit: 255
+    t.integer  "user_id",         limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  add_index "pets", ["user_id"], name: "index_pets_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -22,4 +41,5 @@ ActiveRecord::Schema.define(version: 20150411200955) do
     t.datetime "updated_at",             null: false
   end
 
+  add_foreign_key "pets", "users"
 end
