@@ -1,0 +1,3 @@
+hooks:
+	build:
+		- bundle exec rake db:migrate
