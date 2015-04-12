@@ -1,5 +1,4 @@
 class ErrorsController < ActionController::Base
-  #respond_to :xml, :json, :html
  
   def show
       @exception       = env['action_dispatch.exception']
