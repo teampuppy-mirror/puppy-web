@@ -1,17 +1,33 @@
 class Pet < ActiveRecord::Base
-  
-	@protetor
 
-	def initialize
-		@protetor = 'a'
-	end
+	def get_json_response
+		@json_responde = { 
+			type: "pets",
+			pets: []
+		}
 
-	def protetor
-		return @protetor
-	end
+		Pet.all.each do |pet|
+			@user = User.find(pet.user_id)
 
-	def protetor=(value)
-		@protetor = value
+			@json_responde[:pets] << {
+				nome: pet.nome,
+				genero: pet.sexo,
+				especie: pet.especie,
+				idade: pet.idade,
+				cor: pet.cor,
+				porte: pet.porte,
+				localizacao: "Porto Alegre",
+				foto: pet.foto,
+				descricao_longa: pet.descricao_longa,
+				legenda: pet.legenda,
+				protetor: {
+					id: @user.id,
+					nome: @user.name
+				}
+			}
+		end
+
+		return @json_responde
 	end
 
   belongs_to :user
