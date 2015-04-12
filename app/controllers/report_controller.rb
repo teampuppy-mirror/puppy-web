@@ -2,6 +2,7 @@ class ReportController < ApplicationController
 
 	def add
 		Report.create(report_params)
+
 		render json: {code: 200, message: "Report enviado com sucesso"}
   end
 
