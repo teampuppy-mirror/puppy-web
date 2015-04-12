@@ -30,9 +30,9 @@ Rails.application.routes.draw do
   get 'web/login' => 'web_login#display'
   get 'web/pet/:id' => 'web_item#display'
   get 'web/pets' => 'web_lista#display'
-  #get 'web/registro' => 'web_registro#display'
-  #get 'web/pet/:id' => 'web_item#display'
-  #get 'web/pets' => 'web_lista#display'
+  get 'web/sobre' => 'web_static#sobre'
+  get 'web/contato' => 'web_static#contato'
+  get 'web/protetor' => 'web_static#protetor'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

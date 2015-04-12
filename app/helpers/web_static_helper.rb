@@ -1,0 +1,2 @@
+module WebStaticHelper
+end
