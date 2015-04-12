@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   root 'todo#index'
   get 'todo' => 'todo#index'
 
-  get 'user' => 'todo#index'
+  get 'user' => 'user#get_active'
+  put 'user' => 'user#update'
 
-  get 'pet/:id' => 'todo#index'
-  get 'pets' => 'todo#index'
+  get 'pets' => 'pet#get_all'
+  get 'pet/:id' => 'pet#get'
+
   get 'auth' => 'todo#index'
   get 'user/likes' => 'todo#index'
   get 'wanteds' => 'todo#index'
