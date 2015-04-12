@@ -19,10 +19,12 @@ class UserController < ApplicationController
   end
 
 	def get_active
-		@id = request.headers["HTTP_DEBUG_USER_ID"].to_i
-		@user = User.find(@id)
-
-		render json: @user
+		if session['user.email']
+		  @user = User.where({email: session['user.email']})
+		  render json: @user
+		else
+			render json: {code: 404, error: "Usuário não encontrado/autenticado"}
+		end
 	end
 
   def update
