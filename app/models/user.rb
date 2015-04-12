@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
 				porte: pet.porte,
 				localizacao: "Porto Alegre",
 				foto: pet.foto,
+				miniatura: pet.miniatura,
 				descricao_longa: pet.descricao_longa,
 				legenda: pet.legenda,
 				likes: pet.likes.count
