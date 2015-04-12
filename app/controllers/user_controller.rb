@@ -1,5 +1,14 @@
 class UserController < ApplicationController
-	skip_before_filter :authenticate, :only => [:create,:update]
+	skip_before_filter :authenticate, :only => [:authcheck, :create, :update]
+
+  def authcheck
+		if session['user.email']
+		  @user = User.where({email: session['user.email']})
+		  render json: @user
+		else
+			render json: {code: 403, error: "Usuario nao autenticado"}
+		end
+  end
 
   def create
 		@ja_existe = User.where({email:params[:email]})
@@ -18,17 +27,26 @@ class UserController < ApplicationController
 		# ...
   end
 
-	def get_active
-		@id = request.headers["HTTP_DEBUG_USER_ID"].to_i
-		@user = User.find(@id)
-
-		render json: @user
+  def get_active
+		if session['user.email']
+		  @user = User.where({email: session['user.email']})
+		  render json: @user
+		else
+			render json: {code: 404, error: "Usuário não encontrado/autenticado"}
+		end
 	end
 
   def update
 
 		#@id = request.headers["HTTP_DEBUG_USER_ID"].to_i
 		#@user = User.find(@id)
+  end
+
+  def likes
+  	@user = User.new
+  	@response = @user.json_lista_de_animais_likeds(session['user.email'])
+
+  	render json: @response
   end
 
   private
