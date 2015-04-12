@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   post 'like' => 'like#add'
 
+  post 'denuncia' => 'report#add'
+
   get 'auth' => 'todo#index'
   get 'user/likes' => 'todo#index'
   get 'wanteds' => 'todo#index'
