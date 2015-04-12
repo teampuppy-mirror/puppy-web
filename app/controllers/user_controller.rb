@@ -31,6 +31,11 @@ class UserController < ApplicationController
 		#@user = User.find(@id)
   end
 
+  def likes
+  	@user = User.new
+  	@response = @user.json_lista_de_animais_likeds
+  end
+
   private
 
   def user_params

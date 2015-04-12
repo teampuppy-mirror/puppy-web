@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post 'user' => 'user#create'
   delete 'user' => 'user#delete'
 
+  delete 'user/likes' => 'user#likes'
+
   get 'pets' => 'pet#get_all'
   get 'pet/:id' => 'pet#get'
 
