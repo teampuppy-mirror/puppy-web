@@ -1,0 +1,2 @@
+class WebItemController < ApplicationController
+end

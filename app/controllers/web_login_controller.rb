@@ -1,0 +1,2 @@
+class WebLoginController < ApplicationController
+end
