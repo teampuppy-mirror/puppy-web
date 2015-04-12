@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   put 'user' => 'user#update'
   post 'user' => 'user#create'
   delete 'user' => 'user#delete'
+  post 'auth' => 'user#authcheck'
 
   get 'pets' => 'pet#get_all'
   get 'pet/:id' => 'pet#get'

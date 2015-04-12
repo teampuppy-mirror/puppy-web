@@ -1,5 +1,14 @@
 class UserController < ApplicationController
-	skip_before_filter :authenticate, :only => [:create,:update]
+	skip_before_filter :authenticate, :only => [:authcheck, :create, :update]
+
+  def authcheck
+	if session['user.email']
+	  @user = User.where({email: session['user.email']})
+	  render json: @user
+	else
+		render json: {code: 403, error: "Usuario nao autenticado"}
+	end
+  end
 
   def create
 		@ja_existe = User.where({email:params[:email]})
@@ -18,7 +27,7 @@ class UserController < ApplicationController
 		# ...
   end
 
-	def get_active
+  def get_active
 		if session['user.email']
 		  @user = User.where({email: session['user.email']})
 		  render json: @user
