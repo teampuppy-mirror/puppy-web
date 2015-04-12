@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'pets' => 'pet#get_all'
   get 'pet/:id' => 'pet#get'
 
+  post 'like' => 'like#add'
+
   get 'auth' => 'todo#index'
   get 'user/likes' => 'todo#index'
   get 'wanteds' => 'todo#index'

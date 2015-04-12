@@ -1,6 +1,6 @@
 class Pet < ActiveRecord::Base
 
-	def get_json_response
+	def json_of_all_pets
 		@json_responde = { 
 			type: "pets",
 			pets: []

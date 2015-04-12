@@ -10,10 +10,9 @@ class PetController < ApplicationController
 
 	def get_all
 		@pet = Pet.new
-		@json_response = @pet.get_json_response
+		@json_response = @pet.json_of_all_pets
 
 		render json: @json_response
-
 	end
 
 end
