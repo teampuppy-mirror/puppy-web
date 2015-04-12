@@ -4,6 +4,7 @@
 Pet.create({
 	nome: "Princesa do Junior",
 	foto: "http://www.clinicavetmed.com.br/site/wp-content/uploads/2014/10/Los-gatos-nos-ignoran-1.jpg",
+	miniatura: "http://www.clinicavetmed.com.br/site/wp-content/uploads/2014/10/Los-gatos-nos-ignoran-1.jpg",
 	sexo: 1,
 	especie: "Gato",
 	raca: "Vira-lata",
@@ -19,6 +20,7 @@ Pet.create({
 Pet.create({
 	nome: "Xiau",
 	foto: "http://info.abril.com.br/images/materias/2014/02/thumbs/thumb-32768160227-cachorro-resized.jpg",
+	miniatura: "http://www.clinicavetmed.com.br/site/wp-content/uploads/2014/10/Los-gatos-nos-ignoran-1.jpg",
 	sexo: 2,
 	especie: "Cachorro",
 	raca: "Vira-lata",
@@ -34,6 +36,7 @@ Pet.create({
 Pet.create({
 	nome: "Donatelo",
 	foto: "http://blog.meuamigopet.com.br/blog/wp-content/uploads/2013/01/meu_amigo_pet_criar_reptil_quarta_2.jpeg",
+	miniatura: "http://www.clinicavetmed.com.br/site/wp-content/uploads/2014/10/Los-gatos-nos-ignoran-1.jpg",
 	sexo: 1,
 	especie: "Tartaruga",
 	raca: "",
