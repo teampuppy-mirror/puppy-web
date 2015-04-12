@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'user' => 'user#get_active'
   put 'user' => 'user#update'
+  post 'user' => 'user#create'
 
   get 'pets' => 'pet#get_all'
   get 'pet/:id' => 'pet#get'
