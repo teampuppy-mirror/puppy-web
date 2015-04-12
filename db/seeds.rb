@@ -60,3 +60,8 @@ Pet.create({
 	status: "Para adoção",
 	user_id: @ariel.id
 })
+
+@ariel.likes.create(pet: Pet.find(1))
+@ariel.likes.create(pet: Pet.find(2))
+@emerson.likes.create(pet: Pet.find(3))
+@emerson.likes.create(pet: Pet.find(4))
