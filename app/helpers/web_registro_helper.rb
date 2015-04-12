@@ -1,0 +1,2 @@
+module WebRegistroHelper
+end

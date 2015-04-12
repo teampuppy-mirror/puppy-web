@@ -1,0 +1,2 @@
+module WebListaHelper
+end

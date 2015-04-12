@@ -1,0 +1,2 @@
+class WebRegistroController < ApplicationController
+end

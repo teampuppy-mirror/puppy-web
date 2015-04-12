@@ -1,0 +1,2 @@
+class WebListaController < ApplicationController
+end
