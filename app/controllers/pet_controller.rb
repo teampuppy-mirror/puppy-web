@@ -1,5 +1,5 @@
 class PetController < ApplicationController
-	skip_before_filter :verify_authenticity_token
+	skip_before_filter :authenticate, :only => [:get,:get_all]
 
 	def get
 		@id = params[:id]

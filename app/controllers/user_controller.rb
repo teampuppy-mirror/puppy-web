@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-	skip_before_filter :verify_authenticity_token
+	skip_before_filter :authenticate, :only => [:create,:update]
 
   def create
 		@ja_existe = User.where({email:params[:email]})
@@ -13,6 +13,10 @@ class UserController < ApplicationController
 		end 
   end
 
+  def delete
+
+		# ...
+  end
 
 	def get_active
 		@id = request.headers["HTTP_DEBUG_USER_ID"].to_i
@@ -22,6 +26,7 @@ class UserController < ApplicationController
 	end
 
   def update
+
 		#@id = request.headers["HTTP_DEBUG_USER_ID"].to_i
 		#@user = User.find(@id)
   end
