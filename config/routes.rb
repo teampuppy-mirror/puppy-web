@@ -27,7 +27,9 @@ Rails.application.routes.draw do
   put "user" => 'todo#index'
 
   get 'web' => 'web_home#display'
-  #get 'web/login' => 'web_login#display'
+  get 'web/login' => 'web_login#display'
+  get 'web/pet/:id' => 'web_item#display'
+  get 'web/pets' => 'web_lista#display'
   #get 'web/registro' => 'web_registro#display'
   #get 'web/pet/:id' => 'web_item#display'
   #get 'web/pets' => 'web_lista#display'
