@@ -10,6 +10,7 @@ class Pet < ActiveRecord::Base
 			@user = User.find(pet.user_id)
 
 			@json_responde[:pets] << {
+				id: pet.id,
 				nome: pet.nome,
 				genero: pet.sexo,
 				especie: pet.especie,

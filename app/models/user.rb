@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 		@user.likes.each do |id_pet|
 			pet = Pet.find(id_pet)
 			@json_responde[:pets] << {
+				id: pet.id,
 				nome: pet.nome,
 				genero: pet.sexo,
 				especie: pet.especie,
