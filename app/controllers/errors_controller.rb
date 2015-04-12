@@ -12,7 +12,7 @@ class ErrorsController < ActionController::Base
         format.xml  { render :xml =>
                "<error>#{@exception.to_s}</error>",
                :status => @status_code }
-        format.html { render :file => "#{Rails.root.join('public')}/#{@status_code}.html.erb", layout: "", :status => 500}
+        format.html { render :file => "#{Rails.root.join('public')}/#{@status_code}.html", layout: "", :status => 500}
  
       end and return
   end
