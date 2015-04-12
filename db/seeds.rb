@@ -2,65 +2,66 @@
 @emerson = User.create({name: 'Emerson Rocha', email: "emerson@alligo.com.br", password: "xpto", token: "acme"})
 
 Pet.create({
-	nome: "Princesa do Junior",
-	foto: "http://www.clinicavetmed.com.br/site/wp-content/uploads/2014/10/Los-gatos-nos-ignoran-1.jpg",
-	miniatura: "http://www.clinicavetmed.com.br/site/wp-content/uploads/2014/10/Los-gatos-nos-ignoran-1.jpg",
+	nome: "Pirulito",
+	foto: "http://localhost:3000/img/cat_1_320.jpg",
+	miniatura: "http://localhost:3000/img/cat_1_100.jpg",
 	sexo: 1,
 	especie: "Gato",
-	raca: "Vira-lata",
+	raca: " ",
 	idade: "Filhote",
 	porte: "Pequeno",
-	cor: "Azul",
-	legenda: "Oi sou a princesa, quer me adotar?",
-	descricao_longa: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio velit, vestibulum sit amet porttitor quis, fermentum in justo. Donec pharetra magna sit amet enim finibus, eu mollis magna varius. Proin vel metus sed arcu dignissim ornare lobortis in quam. ",
-	status: "Para adoção",
+	cor: "Pardo",
+	legenda: " ",
+	descricao_longa: " ",
+	status: " ",
 	user_id: @emerson.id
 })
 
 Pet.create({
-	nome: "Xiau",
-	foto: "http://info.abril.com.br/images/materias/2014/02/thumbs/thumb-32768160227-cachorro-resized.jpg",
-	miniatura: "http://www.clinicavetmed.com.br/site/wp-content/uploads/2014/10/Los-gatos-nos-ignoran-1.jpg",
+	nome: "Jujuba",
+	foto: "http://localhost:3000/img/cat_2_320.jpg",
+	miniatura: "http://localhost:3000/img/cat_2_100.jpg",
 	sexo: 2,
-	especie: "Cachorro",
-	raca: "Vira-lata",
-	idade: "Jovem",
+	especie: "Gato",
+	raca: " ",
+	idade: "Adulto",
 	porte: "Pequeno",
 	cor: "Marron",
-	legenda: "quer me adotar?",
-	descricao_longa: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio velit, vestibulum sit amet porttitor quis, fermentum in justo. Donec pharetra magna sit amet enim finibus, eu mollis magna varius. Proin vel metus sed arcu dignissim ornare lobortis in quam. ",
-	status: "Em adoção",
+	legenda: " ",
+	descricao_longa: " ",
+	status: " ",
 	user_id: @emerson.id
 })
 
 Pet.create({
-	nome: "Donatelo",
-	foto: "http://blog.meuamigopet.com.br/blog/wp-content/uploads/2013/01/meu_amigo_pet_criar_reptil_quarta_2.jpeg",
-	miniatura: "http://www.clinicavetmed.com.br/site/wp-content/uploads/2014/10/Los-gatos-nos-ignoran-1.jpg",
+	nome: "Bóris",
+	foto: "http://localhost:3000/img/dog_1_320.jpg",
+	miniatura: "http://localhost:3000/img/dog_1_100.jpg",
 	sexo: 1,
-	especie: "Tartaruga",
+	especie: "Cachorro",
 	raca: "",
 	idade: "Adulto",
 	porte: "Pequeno",
-	cor: "Verde",
-	legenda: "quer me adotar?",
-	descricao_longa: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio velit, vestibulum sit amet porttitor quis, fermentum in justo. Donec pharetra magna sit amet enim finibus, eu mollis magna varius. Proin vel metus sed arcu dignissim ornare lobortis in quam. ",
-	status: "Em processo de adoção",
+	cor: "Bege",
+	legenda: " ",
+	descricao_longa: " ",
+	status: " ",
 	user_id: @ariel.id
 })
 
 Pet.create({
 	nome: "Hamtaro",
-	foto: "http://quemequemanda.com.br/wp-content/uploads/2014/08/white-hamster.jpg",
+	foto: "http://localhost:3000/img/dog_3_320.jpg",
+	miniatura: "http://localhost:3000/img/dog_3_100.jpg",
 	sexo: 2,
-	especie: "Hamster",
-	raca: "Hamster",
-	idade: "Adulto",
+	especie: "Cachorro",
+	raca: " ",
+	idade: "Idoso",
 	porte: "Grande",
-	cor: "Colorido",
-	legenda: "quer me adotar?",
-	descricao_longa: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio velit, vestibulum sit amet porttitor quis, fermentum in justo. Donec pharetra magna sit amet enim finibus, eu mollis magna varius. Proin vel metus sed arcu dignissim ornare lobortis in quam. ",
-	status: "Para adoção",
+	cor: "Marron",
+	legenda: " ",
+	descricao_longa: " ",
+	status: " ",
 	user_id: @ariel.id
 })
 
@@ -68,3 +69,5 @@ Pet.create({
 @ariel.likes.create(pet: Pet.find(2))
 @emerson.likes.create(pet: Pet.find(3))
 @emerson.likes.create(pet: Pet.find(4))
+
+@ariel.reports.create(pet: Pet.first)
