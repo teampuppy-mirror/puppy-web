@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   delete 'user' => 'user#delete'
   post 'auth' => 'user#authcheck'
 
-  delete 'user/likes' => 'user#likes'
+  get 'user/likes' => 'user#likes'
 
   get 'pets' => 'pet#get_all'
   get 'pet/:id' => 'pet#get'
@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   post 'denuncia' => 'report#add'
 
   get 'auth' => 'todo#index'
-  get 'user/likes' => 'todo#index'
   get 'wanteds' => 'todo#index'
   get 'denuncias' => 'todo#index'
   get 'denuncia/:id' => 'todo#index'
