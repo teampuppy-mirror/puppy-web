@@ -1,8 +1,8 @@
 class TodoController < ApplicationController
-  skip_before_filter :verify_authenticity_token  
+  skip_before_filter :verify_authenticity_token
 
   def index
-  	@test = {name: 'teste'}
+  	@test = {error: "serviço não existente"}
 
   	render json: @test
   end
