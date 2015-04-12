@@ -3,8 +3,8 @@
 
 Pet.create({
 	nome: "Pirulito",
-	foto: "http://localhost:3000/img/cat_1_320.jpg",
-	miniatura: "http://localhost:3000/img/cat_1_100.jpg",
+	foto: "http://puppy.app.hackinpoa.tsuru.io/img/cat_1_320.jpg",
+	miniatura: "http://puppy.app.hackinpoa.tsuru.io/img/cat_1_100.jpg",
 	sexo: 1,
 	especie: "Gato",
 	raca: " ",
@@ -19,8 +19,8 @@ Pet.create({
 
 Pet.create({
 	nome: "Jujuba",
-	foto: "http://localhost:3000/img/cat_2_320.jpg",
-	miniatura: "http://localhost:3000/img/cat_2_100.jpg",
+	foto: "http://puppy.app.hackinpoa.tsuru.io/img/cat_2_320.jpg",
+	miniatura: "http://puppy.app.hackinpoa.tsuru.io/img/cat_2_100.jpg",
 	sexo: 2,
 	especie: "Gato",
 	raca: " ",
@@ -35,8 +35,8 @@ Pet.create({
 
 Pet.create({
 	nome: "Bóris",
-	foto: "http://localhost:3000/img/dog_1_320.jpg",
-	miniatura: "http://localhost:3000/img/dog_1_100.jpg",
+	foto: "http://puppy.app.hackinpoa.tsuru.io/img/dog_1_320.jpg",
+	miniatura: "http://puppy.app.hackinpoa.tsuru.io/img/dog_1_100.jpg",
 	sexo: 1,
 	especie: "Cachorro",
 	raca: "",
@@ -51,8 +51,8 @@ Pet.create({
 
 Pet.create({
 	nome: "Hamtaro",
-	foto: "http://localhost:3000/img/dog_3_320.jpg",
-	miniatura: "http://localhost:3000/img/dog_3_100.jpg",
+	foto: "http://puppy.app.hackinpoa.tsuru.io/img/dog_3_320.jpg",
+	miniatura: "http://puppy.app.hackinpoa.tsuru.io/img/dog_3_100.jpg",
 	sexo: 2,
 	especie: "Cachorro",
 	raca: " ",

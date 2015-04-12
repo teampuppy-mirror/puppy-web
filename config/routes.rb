@@ -22,8 +22,7 @@ Rails.application.routes.draw do
   get 'auth' => 'todo#index'
   get 'wanteds' => 'todo#index'
   get 'denuncias' => 'todo#index'
-  get 'denuncia/:id' => 'todo#index'
-
+  
   put "user" => 'todo#index'
 
   get 'web' => 'web_home#display'
