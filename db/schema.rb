@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412020056) do
+ActiveRecord::Schema.define(version: 20150412072057) do
 
   create_table "likes", force: :cascade do |t|
     t.integer  "pet_id",     limit: 4
@@ -41,6 +41,18 @@ ActiveRecord::Schema.define(version: 20150412020056) do
   end
 
   add_index "pets", ["user_id"], name: "index_pets_on_user_id", using: :btree
+
+  create_table "reports", force: :cascade do |t|
+    t.integer  "pet_id",     limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "tipo",       limit: 255
+    t.string   "outros",     limit: 255
+  end
+
+  add_index "reports", ["pet_id"], name: "index_reports_on_pet_id", using: :btree
+  add_index "reports", ["user_id"], name: "index_reports_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",       limit: 255
